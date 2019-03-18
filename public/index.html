@@ -11,6 +11,7 @@
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
 
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
@@ -30,16 +31,32 @@
 
     <!-- Page-specific (main) content here -->
     <main class="container">
-      <h1>HEAD</h1>
-      <h2>TO - March 4</h2>
 
-      <p> STUFf fdfdhgkjfdgkjfdnkgjfdkgkfdgkfd fjgfdjgkfhkjfhjkghf
+      <section class="new-tweet">
+
+        <h2>Compose Tweet</h2>
+
+        <form action="/tweets" method="POST">
+
+          <textarea name="text" placeholder="What are you humming about?"></textarea>
+
+          <input type="submit" value="Tweet">
+
+          <span class="counter">140</span>
+
+        </form>
+
+      </section>
+
+      <p style="font-family: serif;">STUFf fdfdhgkjfdgkjfdnkgjfdkgkfdgkfd fjgfdjgkfhkjfhjkghf
         fjkgjfkgfkjg
         fgkfjgkfjgkf
         gkjfkg
         fkjgjfkgjfk
         fngfkj
+
       </p>
+
       <p> STUFf fdfdhgkjfdgkjfdnkgjfdkgkfdgkfd fjgfdjgkfhkjfhjkghf
         fjkgjfkgfkjg
         fgkfjgkfjgkf
