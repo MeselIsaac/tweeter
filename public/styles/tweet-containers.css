@@ -1,42 +1,26 @@
 section#tweet-container {
-    margin-left: 2em;
-    margin-right: 2em;
-    border-style: solid;
-    border-radius: 6px;
-    background-color: #f2f2f2;
-    margin-top: 20px;
+  margin-left: 2em;
+  margin-right: 2em;
+  border-style: solid;
+  border-radius: 6px;
+  background-color: #f2f2f2;
+  margin-top: 20px;
 }
 
 article.tweets {
-    margin-left: 2em;
-    margin-right: 2em;
-    border-style: solid;
-    border-radius: 6px;
-    background-color: white;
-    margin-top: 20px;
-    height: 200px;
-    position: relative;
-    opacity: 0.5;
+  margin-left: 2em;
+  margin-right: 2em;
+  border-style: solid;
+  border-radius: 6px;
+  background-color: white;
+  margin-top: 20px;
+  height: 200px;
+  position: relative;
+  opacity: 0.5;
 }
 
 article.tweets:hover {
   opacity: 1;
-
-}
-/*    .tweets header p {
-      background-color: white;
-          background-color: white;
-     position: absolute;
-    width: 100%;
-    top: 50px;
-    height: 70px;
-    }*/
-
-article.tweets header img.icon {
-    top: 10px;
-    left: 10px;
-    height: 35px;
-    border-radius: 6px;
 
 }
 
@@ -45,18 +29,25 @@ article.tweets header {
   background-color: #f2f2f2;
 }
 
+article.tweets header img.icon {
+  top: 10px;
+  left: 10px;
+  height: 35px;
+  border-radius: 6px;
+
+}
+
 article.tweets header h2 {
-   display: inline;
-   margin: 2px;
+  display: inline;
+  margin: 2px;
 
 }
 
 article.tweets header h3 {
-position: absolute;
+  position: absolute;
   top: 0;
-    right: 0;
+  right: 0;
   }
-
 
 article.tweets footer {
   position: absolute;
@@ -65,6 +56,7 @@ article.tweets footer {
   height: 30px;
   background-color: #f2f2f2;
 }
+
 .tweets footer p {
   margin: auto;
 }
