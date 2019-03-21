@@ -3,12 +3,12 @@ section.new-tweet {
     margin-right: 2em;
     border-style: solid;
     border-radius: 6px;
-    background-color: #DCDCDC
-  ;
+    background-color: #f2f2f2;
 }
 
-span.count {
-
+span.counter {
+    padding-left: 278px;
+    font-size: 14px;
 }
 
 main textarea {
@@ -16,16 +16,25 @@ main textarea {
     display: block;
     width: 95%;
     border-style: double;
+    padding-left: 5px;
+    padding-top: 5px;
 
 }
 
 main input {
     margin-left: 2.5%;
     margin-top: 1%;
+    margin-bottom: 1.5%
 
 
 }
 
-main h2 {
-  margin-left: 2.5%;
+section.new-tweet > h2 {
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    border-bottom: 2px solid #244751;
+    padding-bottom: 3px;
+    border-bottom-style: inset;
 }
+
+
