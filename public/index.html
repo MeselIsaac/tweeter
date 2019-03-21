@@ -24,37 +24,6 @@
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/app.js"></script>
     <script type="text/javascript" src= "/scripts/composer-char-counter.js"></script>
-    <script>
-    $(function() {
-
-      $("form").submit(function(event) {
-        alert("Handler for .submit() called.");
-        event.preventDefault()
-      })
-
-
-      var form = $("form");
-      form.on("submit", function() {
-        if (!$("textarea").val()) {
-          alert("Please compose message before submitting your tweet");
-        } else if ($("textarea").val().length > 140) {
-          alert(`Exceeded character limit by ${$("textarea").val().length - 140}`)
-        } else {
-          console.log("Form submitted, performing ajax post...");
-          $.ajax({
-            url: "/tweets",
-            type: "POST",
-            data: $("textarea").serialize()
-          })
-          .then(function (tweetPOST) {
-            console.log("Success?: ", tweetPOST)
-          })
-        }
-      })
-    })
-
-
-    </script>
 
   </head>
   <body>
