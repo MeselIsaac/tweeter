@@ -24,6 +24,9 @@ article.tweets:hover {
 
 }
 
+/*footer img.retweet: hover {
+  display: initial;
+}*/
 article.tweets header {
   position: relative;
   background-color: #f2f2f2;
@@ -41,6 +44,15 @@ article.tweets header h2 {
   display: inline;
   margin: 2px;
 
+}
+
+article.tweets div {
+    background-color: white;
+    height: 127px;
+    /* width: 100%; */
+    /* margin: auto; */
+    /* text-align: justify; */
+    word-break: break-word;
 }
 
 article.tweets header h3 {
@@ -61,17 +73,18 @@ article.tweets footer {
   margin: auto;
 }
 
-.tweets footer img {
-  visibility: hidden;
+article.tweets footer img.retweet {
+  height: 35px;
+  border-radius: 6px;
+  position: absolute;
+  right: 10px;
+  bottom: 1%;
+  /*  display: none;*/
+
+
+
+
 }
 
-/*.tweets footer img: hover {
-  visibility: visible;
-}*/
-/*#tweet-container :hover {
-  opacity: .5;
-}
-#tweet-container img:hover {
-  opacity: .5;
-}*/
+
 
