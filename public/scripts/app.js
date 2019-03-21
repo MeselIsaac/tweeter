@@ -71,8 +71,7 @@ function createTweetElement(tweet) {
 }
 
 
-// console.log($tweet)
-// console.log("test")
+
 
 function renderTweets(array) {
   for (tweet of array) {
@@ -81,11 +80,17 @@ function renderTweets(array) {
 
 }
 
-renderTweets(data);
+
+function loadTweets() {
+  $.ajax("/tweets", {method: "GET"})
+  .then(function(arrayOfTweets) {
+    renderTweets(arrayOfTweets);
+  })
+
+}
+
+loadTweets()
 
 })
 
-// Define another function renderTweets in the same file. This function can be responsible for taking in an array of tweet objects and then appending each one to the #tweets-container. In order to do this, the renderTweets will need to leverage the createTweetElement function you wrote earlier by passing to it the tweet object, using the returned jQuery object by appending it to the #tweets-container section.
-
-// By the end of this task, your app.js will look something like this:
 
