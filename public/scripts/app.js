@@ -91,6 +91,29 @@ function loadTweets() {
 
 loadTweets()
 
+$("form").submit(function(event) {
+        alert("Handler for .submit() called.");
+        event.preventDefault()
+      })
+
+var form = $("form");
+form.on("submit", function() {
+  if (!$("textarea").val()) {
+    alert("Please compose message before submitting your tweet");
+  } else if ($("textarea").val().length > 140) {
+    alert(`Exceeded character limit by ${$("textarea").val().length - 140}`)
+  } else {
+    $.ajax({
+      url: "/tweets",
+      type: "POST",
+      data: $("textarea").serialize()
+    })
+    .then($.ajax("/tweets", {method: "GET" }).then(function(displayTweets){
+      $("#tweet-container").children().remove();
+      loadTweets();
+    }))
+  }
+})
 })
 
 
