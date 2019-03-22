@@ -48,7 +48,6 @@ function loadTweets() {
 loadTweets()
 
 $("form").submit(function(event) {
-        alert("Handler for .submit() called.");
         event.preventDefault()
       })
 
@@ -67,6 +66,8 @@ form.on("submit", function() {
     .then($.ajax("/tweets", {method: "GET" }).then(function(displayTweets){
       $("#tweet-container").children().remove();
       loadTweets();
+       $("textarea").val('')
+
     }))
   }
 })
