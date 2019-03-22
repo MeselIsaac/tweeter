@@ -7,6 +7,7 @@
     height: 80px;
     padding-left: 2em;
     padding-right: 2em;
+    z-index: 1;
 
 }
 
@@ -23,3 +24,21 @@
     line-height: 70px;
 
 }
+
+#compose {
+    position: absolute;
+    right: 0;
+    margin: 1.5em 2em;
+
+
+}
+
+#compose:hover {
+    -webkit-box-shadow: 0px 0px 30px 0px rgba(0, 255, 0, 0.67);
+    -moz-box-shadow:    0px 0px 30px 0px rgba(0, 255, 0, 0.67);
+    box-shadow:         0px 0px 30px 0px rgba(0, 255, 0, 0.67);
+
+}
+
+
+
