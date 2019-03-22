@@ -66,7 +66,8 @@ form.on("submit", function() {
     .then($.ajax("/tweets", {method: "GET" }).then(function(displayTweets){
       $("#tweet-container").children().remove();
       loadTweets();
-       $("textarea").val('')
+       $("textarea").val('');
+       $(".counter").text(140);
 
     }))
   }
