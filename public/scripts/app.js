@@ -6,6 +6,28 @@
 //
 $(function() {
 
+  function isTweetEmpty() {
+    if (!$("textarea").val()) {
+      $("#error").slideUp();
+      setTimeout(function () {
+        $("#error").text("Please compose message before submitting your tweet.").slideDown();
+      }, 500);
+      return true;
+    }
+    return false;
+  }
+
+  function isTweetTooBig() {
+    if ($("textarea").val().length > 140) {
+      $("#error").slideUp();
+      setTimeout(function () {
+        $("#error").text(`Exceeded character limit by ${$("textarea").val().length - 140}`).slideDown();
+      }, 500);
+      return true;
+    }
+    return false;
+  }
+
   function createTweetElement(tweet) {
     let $tweets = $("<article class='tweets'>");
     let $img = $("<img class='icon' src="+tweet.user.avatars.regular+">");
@@ -35,33 +57,39 @@ $(function() {
     })
   }
 
+  //Load and display tweets contained in Database
   loadTweets()
 
+  //Disable tweet button's default action
   $("form").submit(function(event) {
     event.preventDefault();
   })
 
   var form = $("form");
   form.on("submit", function() {
-    if (!$("textarea").val()) {
-      alert("Please compose message before submitting your tweet");
-    } else if ($("textarea").val().length > 140) {
-      alert(`Exceeded character limit by ${$("textarea").val().length - 140}`)
-    } else {
-      $.ajax({
-        url: "/tweets",
-        type: "POST",
-        data: $("textarea").serialize()
-      })
-      .then($.ajax("/tweets", {method: "GET" }).then(function(displayTweets){
-        $("#tweet-container").children().remove();
-        loadTweets();
-        $("textarea").val('');
-        $(".counter").text(140);
-        return false;
-      }))
+    isTweetEmpty()
+    isTweetTooBig()
+
+    if (isTweetEmpty() === false && isTweetTooBig() === false) {
+      $("#error").slideUp();
+      setTimeout(function () {
+        $.ajax({
+          url: "/tweets",
+          type: "POST",
+          data: $("textarea").serialize()
+        })
+        .then($.ajax("/tweets", {method: "GET" }).then(function(displayTweets){
+          $("#tweet-container").children().remove();
+          loadTweets();
+          $("textarea").val('');
+          $(".counter").text(140);
+          return false;
+        }))
+      }, 500)
     }
   })
 })
+
+
 
 
