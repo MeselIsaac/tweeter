@@ -37,4 +37,9 @@ section.new-tweet > h2 {
     border-bottom-style: inset;
 }
 
+section.new-tweet > p {
+    display: none;
+    color: red;
+    text-align: center;
+}
 
