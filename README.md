@@ -6,9 +6,10 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Final Product
 
-!["Homepage"]()
-!["Homepage - compose-tweet open"]()
-!["Homepage - error message"]()
+!["Homepage"](https://github.com/MeselIsaac/tweeter/blob/master/doc/compose-tweet-closed.png)
+!["Homepage - compose-tweet open"](https://github.com/MeselIsaac/tweeter/blob/master/doc/compose-tweet-open.png)
+!["Homepage - error message"](https://github.com/MeselIsaac/tweeter/blob/master/doc/error-message.png)
+
 ## Getting Started
 
 1. Fork this repository, then clone your fork of this repository.
