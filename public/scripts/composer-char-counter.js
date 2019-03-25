@@ -1,5 +1,6 @@
 $(function() {
 
+
   function charCounter (event) {
     let num = 140;
     let countdown = num - $(this).val().length;
@@ -11,16 +12,6 @@ $(function() {
   }
 
   $("textarea").on("input", charCounter);
-
-  // function hoverIn() {
-  //   $(this).css("opacity", )
-  // }
-
-  // function hoverOut() {
-  //   $(this).css("background-color", "blue")
-  // }
-
-  // $("#tweet-container").hover(hoverIn);
 
 });
 
